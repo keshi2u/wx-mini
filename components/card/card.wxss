@@ -1,0 +1,36 @@
+.card {
+  border-radius: 16rpx;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  margin: 20rpx;
+}
+
+.card-img {
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.card-info {
+  padding: 20rpx;
+}
+
+.card-subtitle {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.card-price {
+  font-size: 28rpx;
+  color: #d35400;
+  font-weight: bold;
+}

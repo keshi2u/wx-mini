@@ -1,0 +1,6 @@
+
+<view class="container">
+  <image class="styled-image" src="/assets/empty.png" mode="widthFix"></image>
+  <button class="btn">请先登录</button>
+</view>
+
