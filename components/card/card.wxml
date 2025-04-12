@@ -1,0 +1,21 @@
+<view class="card">
+  <image class="card-img" src="{{image}}" mode="aspectFill" />
+
+  <view class="card-info">
+    <view class="card-subtitle">
+      <text>{{houseType}}</text>
+      <text> · </text>
+      <text>{{area}}㎡</text>
+      <text> · </text>
+      <text>{{city}}</text>
+    </view>
+
+    <view class="card-title">
+      <text>{{building}}</text>
+    </view>
+
+    <view class="card-price">
+      <text>￥{{price}}</text>
+    </view>
+  </view>
+</view>

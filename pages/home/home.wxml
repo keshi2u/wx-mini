@@ -1,0 +1,77 @@
+<view class="safe-area" style="padding-top:{{statusBarHeight}}px; padding-bottom:{{safeAreaInsets.bottom}}px">
+
+  <view style="text-align: center; color: #b9b9b9" wx:if="{{pageLoading}}">
+    <t-loading theme="circular" size="40rpx" text="加载中..." inherit-color />
+  </view>
+
+  <view class="home-page-header" style="padding-top:8px">
+    <view class="a">
+      <view class="header-container">
+        <view class="header-main-container">
+          <text class="header-main">当家</text>
+        </view>
+        <view class="divider"></view>
+        <view class="header-right-container">
+          <view>
+            <text>正品便宜服务好</text>
+          </view>
+          <view>
+            <text class="sub">假一赔十，超长售后，售后无忧</text>
+          </view>
+        </view>
+      </view>
+      <image class="cart-icon" src="/assets/cart.svg"></image>
+    </view>
+
+    <!-- <view class="search">
+      <t-search t-class-input="t-search__input" t-class-input-container="t-search__input-container" placeholder="火热发售中" leftIcon="" disabled>
+        <t-icon slot="left-icon" prefix="wr" name="search" size="40rpx" color="#fa550f" />
+      </t-search>
+    </view> -->
+
+    <view class="search-container">
+      <view class="search-bar">
+        <t-icon slot="left-icon" prefix="wr" name="search" size="40rpx" color="#fa550f" />
+        <input class="search-input" placeholder="搜索商品" placeholder-class="placeholder-style" />
+        <view class="search-button">搜索</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Main content area -->
+  <view class="parent">
+
+    <view class="item-container">
+      <view class="item" wx:for="{{featuredProducts || goodsList.slice(0, 8)}}" wx:key="id">
+        <image class="styled-image" src="{{item.image || '/assets/placeholder.png'}}" mode="aspectFit"></image>
+        <view class="item-text">{{item.name || '商品名称'}}</view>
+      </view>
+    </view>
+
+    <view class="item-container-2">
+      <view class="container-2">
+        <view>
+          <text class="title">腻子粉</text>
+        </view>
+        <view class="container-2-btn">
+          <text>搜索 ></text>
+        </view>
+      </view>
+      <view class="item-container-sec">
+        <view class="item" wx:for="{{categoryProducts || goodsList.slice(0, 4)}}" wx:key="id">
+          <image class="styled-image" src="{{item.image || '/assets/products/product1.jpg'}}" mode="aspectFit"></image>
+          <view class="item-text">{{item.name || '商品名称'}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="home-page-container">
+      <view class="title">
+        <text>搜索商品</text>
+      </view>
+      <goods-list wr-class="goods-list-container" goodsList="{{goodsList}}" bind:click="goodListClickHandle" bind:addcart="goodListAddCartHandle" />
+      <load-more list-is-empty="{{!goodsList.length}}" status="{{goodsListLoadStatus}}" bind:retry="onReTry" />
+      <t-toast id="t-toast" />
+    </view>
+  </view>
+</view>

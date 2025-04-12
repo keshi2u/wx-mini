@@ -1,0 +1,79 @@
+<t-user-center-card userInfo="{{userInfo}}" isPhoneHide="{{true}}" name-class="custom-name-class" phone-class="custom-phone-class" avatar-class="customer-avatar-class" currAuthStep="{{currAuthStep}}" bind:gotoUserEditPage="gotoUserEditPage" />
+<view class="content-wrapper">
+  <view class="counter-container">
+    <view class="counter-item">
+      <text>0</text>
+      <text class="conter-text">优惠券</text>
+    </view>
+    <view class="counter-item">
+      <text>0</text>
+      <text class="conter-text">我的权益</text>
+    </view>
+    <view class="counter-item">
+      <text>0</text>
+      <text class="conter-text">我的收藏</text>
+    </view>
+  </view>
+  <view class="chip-container">
+    <view class="chip">
+      <view class="chip-inner">
+        <text>⭐️</text>
+        <view>
+          <text>呼叫记录</text>
+        </view>
+      </view>
+      <text>></text>
+    </view>
+    <view class="chip">
+      <view class="chip-inner">
+        <text>⭐️</text>
+        <view>
+          <text>呼叫记录</text>
+        </view>
+      </view>
+      <text>></text>
+    </view>
+  </view>
+
+  <view class="order-group-wrapper">
+    <t-order-group orderTagInfos="{{orderTagInfos}}" bind:onClickTop="jumpAllOrder" bind:onClickItem="jumpNav" />
+  </view>
+
+  <view class="common-functions">
+    <view class="function-item" wx:for="{{functions}}" wx:key="index" bindtap="onFunctionClick" data-type="{{item.type}}">
+      <t-icon name="{{item.icon}}" size="48rpx" />
+      <text class="function-text">{{item.title}}</text>
+    </view>
+  </view>
+  <view class="container-bottom">
+    <text>我的余额</text>
+    <view class="common-functions">
+      <view class="function-item" bindtap="onFunctionClick" data-type="balance">
+        <t-icon name="wallet" size="48rpx" />
+        <text class="function-text">我的余额</text>
+      </view>
+      <view class="function-item" bindtap="onFunctionClick" data-type="address">
+        <t-icon name="location" size="48rpx" />
+        <text class="function-text">地址管理</text>
+      </view>
+      <view class="function-item" bindtap="onFunctionClick" data-type="gifts">
+        <t-icon name="gift" size="48rpx" />
+        <text class="function-text">我的礼品</text>
+      </view>
+      <view class="function-item" bindtap="onFunctionClick" data-type="events">
+        <t-icon name="star" size="48rpx" />
+        <text class="function-text">活动参与</text>
+      </view>
+      <view class="function-item" bindtap="onFunctionClick" data-type="feedback">
+        <t-icon name="wallet" size="48rpx" />
+        <text class="function-text">优化建议</text>
+      </view>
+      <view class="function-item" bindtap="onFunctionClick" data-type="privacy">
+        <t-icon name="wallet" size="48rpx" />
+        <text class="function-text">隐私保护</text>
+      </view>
+    </view>
+  </view>
+  <view class="bottom"></view>
+
+</view>

@@ -1,0 +1,122 @@
+<view class="container" style="padding-top: {{statusBarHeight}}px;">
+  <view class="top-banner">
+    <text class="promo">没有装修公司赚差价 直省30%</text>
+    <text class="city">北京市</text>
+  </view>
+
+  <view class="title-section">
+    <view class="title">
+      <text>1分钟了解</text>
+      <text class="highlight">当家</text>
+    </view>
+    <view class="guarantees">
+      <text>🔒 品质保障</text>
+      <text>💰 省钱保障</text>
+      <text>🔍 透明保障</text>
+      <text>🛠 售后保障</text>
+    </view>
+  </view>
+
+  <view class="card-row">
+    <view class="card">
+      <text class="card-desc">纯设计 更专业</text>
+      <image src="/assets/doc.png" class="avatar2" />
+      <!-- <text class="card-title">设计装修</text> -->
+      <button class="btn-green">找设计</button>
+    </view>
+    <view class="card">
+      <text class="card-desc">全程服务 更省心</text>
+      <image src="/assets/doc.png" class="avatar2" />
+      <!-- <text class="card-title">工长装修</text> -->
+      <button class="btn-orange">找工长</button>
+    </view>
+    <view class="card">
+      <text class="card-desc">严选工匠 更放心</text>
+      <image src="/assets/doc.png" class="avatar2" />
+      <!-- <text class="card-title">工匠装修</text> -->
+      <button class="btn-blue">找工匠</button>
+    </view>
+  </view>
+
+  <view class="section-top">
+    <text class="section-title">施工工价</text>
+    <text class="section-sub">工价公开透明 买贵双倍赔</text>
+    <view class="section-buttons">
+      <view class="btn-arrow">
+        <view class="section-title">
+          <text>全房装修</text>
+          <view class="button-container">
+            <view class="arrow-button">
+              <text class="arrow-icon">→</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-arrow">
+        <view class="section-title">
+          <text>局部改造</text>
+          <view class="button-container">
+            <view class="arrow-button">
+              <text class="arrow-icon">→</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-child">
+      <view class="section-title">
+        <text>装修报价</text>
+        <view class="button-container">
+          <view class="arrow-button">
+            <text class="arrow-icon">→</text>
+          </view>
+        </view>
+      </view>
+      <text class="section-sub">高品质施工 高标准验收</text>
+    </view>
+
+    <image src="/assets/cat.jpg" class="avatar" />
+  </view>
+
+
+  <view class="section">
+    <view class="section-child">
+      <view class="section-title">
+        <text>装修报价</text>
+        <view class="button-container">
+          <view class="arrow-button">
+            <text class="arrow-icon">→</text>
+          </view>
+        </view>
+      </view>
+      <text class="section-sub">免费上门精准报价 多比比再装修</text>
+    </view>
+    <image src="/assets/cat.jpg" class="avatar" />
+  </view>
+  <view class="c">
+    <text class="title-2">精选完工案例</text>
+  <view class="card-grid">
+  <block wx:for="{{cardList}}" wx:key="index">
+    <view class="grid-item">
+      <card-item 
+        image="{{item.image}}"
+        houseType="{{item.houseType}}"
+        area="{{item.area}}"
+        city="{{item.city}}"
+        building="{{item.building}}"
+        price="{{item.price}}"
+      />
+    </view>
+  </block>
+</view>
+  </view>
+  
+
+<view class="bottom"></view>
+
+
+
+</view>

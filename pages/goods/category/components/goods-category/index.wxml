@@ -1,0 +1,64 @@
+<view class="container safe-area">
+  <image src="/assets/bg3.png" class="bg-image"></image>
+  <view class="title">
+    <text>我家是毛</text>
+  </view>
+  
+  <!-- Section 1 -->
+  <view class="section">
+    <view class="section-header" bindtap="toggleSection" data-section="1">
+      <text>我家是毛坯房</text>
+      <image class="collapse-icon" src="{{section1Open ? '/assets/icons/up.svg' : '/assets/icons/down.svg'}}" />
+    </view>
+    <view wx:if="{{section1Open}}">
+      <view class="list-item">
+        <i-icon type="home" size="40" class="icon"></i-icon>
+        <text>想要验房</text>
+      </view>
+      <view class="list-item">
+        <i-icon type="brush" size="40" class="icon"></i-icon>
+        <text>想找设计师</text>
+      </view>
+      <view class="list-item">
+        <image src="/assets/budget.png" class="icon"></image>
+        <text>想要全房装修预算</text>
+      </view>
+      <view class="list-item recommended">
+        <image src="/assets/contractor.png" class="icon"></image>
+        <text>想找工长整体承接装修</text>
+        <view class="recommend-tag">推荐</view>
+      </view>
+      <view class="list-item">
+        <image src="/assets/worker.png" class="icon"></image>
+        <text>房子已开工，想单独找师傅</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Section 2 -->
+  <view class="section">
+    <view class="section-header" bindtap="toggleSection" data-section="2">
+      <text>我家是精装房/旧房</text>
+      <image class="collapse-icon" src="{{section2Open ? '/assets/icons/up.svg' : '/assets/icons/down.svg'}}" />
+    </view>
+    <view wx:if="{{section2Open}}">
+      <view class="list-item">
+        <image src="/assets/designer.png" class="icon"></image>
+        <text>想找设计师</text>
+      </view>
+      <view class="list-item">
+        <image src="/assets/budget.png" class="icon"></image>
+        <text>想要局部改造预算</text>
+      </view>
+      <view class="list-item recommended">
+        <image src="/assets/contractor.png" class="icon"></image>
+        <text>想找工长整体承接装修</text>
+        <view class="recommend-tag">推荐</view>
+      </view>
+      <view class="list-item">
+        <image src="/assets/worker.png" class="icon"></image>
+        <text>需要单独找师傅</text>
+      </view>
+    </view>
+  </view>
+</view>
